@@ -1,0 +1,514 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END OF CSS RESET */
+
+/* Style Umum */
+body{
+    font-family: monospace;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #080205;
+    overflow-x: hidden;
+    height: 1200px;
+}
+
+p::selection{
+    background-color: #2E073F;
+    color: #EBD3F8;
+}
+/* Akhir Style Umum */
+
+/* Style Main Container */
+.container-fluid{
+    padding: 0;
+    transform: none;
+}
+/* Akhir Style Main Container */
+
+/* Style Header */
+#header{
+    padding-left: 100px;
+}
+
+.header-area{
+    background: #2E073F;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-area h1{
+    color: #EBD3F8;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+/* Akhir Style Header */
+
+/* Style Sidebar */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sidebar .title-sidebar img{
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-menu ul li a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #080205;
+    line-height: 40px;
+    border-top: 1px solid #FFFFFF;
+    transition: 0.3s ease-in;
+}
+
+.sidebar .sidebar-menu a:hover{
+    background-color: #FFFFFF;
+}
+/* Akhir Style Sidebar */
+
+/* Main Style */
+#main{
+    padding-left: 100px;
+}
+/* Akhir Main Style */
+
+/* Navbar Style */
+.navbar{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+nav ul{
+    display: flex;
+    gap: 38px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #080205;
+}
+/* Akhir Style Navbar */
+
+/* Hero Style */
+.hero-area{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: #F8F8F8;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.left-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-area h1,h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.left-area h1{
+    font-size: 30px;
+}
+
+.right-area img{
+    width: 300px;
+    border-radius: 50%;
+}
+/* Akhir Hero Style */
+
+/* Quick Facts Style */
+.quick-facts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quick-facts h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.quick-facts span{
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.facts-area{
+    display: flex;
+    align-items: center;
+    gap: 39px;
+    margin-top: 10px;
+}
+/* Akhir Quick Facts Style */
+
+/* Bio Style */
+.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.bio-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 39px;
+    margin-top: 10px;
+    width: 593px;
+    text-align: justify;
+}
+/* Akhir Bio Style */
+
+/* Award Style */
+#awards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #F8F8F8;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.award{
+    height: 295px;
+    border: solid 1px #CCCCCC;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 2s cubic-bezier(.165, .84, .44, 1);
+}
+
+.award:hover{
+    transform: scale3d(1.010, 1.010, 1);
+}
+
+.awards-area{
+    display: grid;
+    grid-template-columns: 214px 214px 214px 214px;
+    align-items: center;
+    gap: 50px;
+}
+
+.award-cover{
+    height: 250px;
+}
+
+.award img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.award-info h4{
+    padding: 10px 10px;
+}
+/* Akhir Award Style */
+
+/* Quotes Style */
+#quotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+#quotes h1{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+#quotes h2{
+    font-size: 19px;
+    font-weight: bolder;
+    text-align: right;
+    margin-top: 5px;
+}
+/* Akhir Quotes Style */
+
+/* Footer Style */
+.footer-area{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    background-color: #2E073F;
+}
+
+.footer-area h3{
+    color: #EBD3F8;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+/* Akhir Footer Style */
+
+/* Style Responsive Halaman Idola */
+@media (max-width: 1220px){
+    .awards-area{
+        grid-template-columns: 214px 214px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1210px) {
+    .hero-area{
+        gap: 50px;
+    }
+
+    #awards{
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-area{
+        gap: 0;
+    }
+
+    .left-area h1{
+        font-size: 25px;
+    }
+
+    .right-area img{
+        width: 280px;
+    }
+
+    .facts-area{
+        gap: 30px;
+    }
+
+    .quick-facts h1{
+        font-size: 18px;
+    }
+
+    .quick-facts span{
+        font-size: 14px;
+    }
+
+    .bio .title h1{
+        font-size: 18px;
+    }
+
+    .bio-area p{
+        font-size: 14px;
+    }
+
+    .bio-area{
+        padding-left: 30px;
+    }
+
+    #awards{
+        padding-bottom: 30px;
+    }
+
+    #quotes h1{
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #header{
+        padding-left: 0;
+    }
+
+    .sidebar{
+        position: relative;
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .sidebar .title-sidebar{
+        display: none;
+    }
+
+    #main{
+        padding-left: 0;
+    }
+
+    .hero-area{
+        gap: 0;
+    }
+
+    .left-area h1{
+        font-size: 25px;
+    }
+
+    .facts-area{
+        gap: 30px;
+    }
+
+    .quick-facts h1{
+        font-size: 18px;
+    }
+
+    .quick-facts span{
+        font-size: 14px;
+    }
+
+    .bio .title h1{
+        font-size: 18px;
+    }
+
+    .bio-area p{
+        font-size: 14px;
+    }
+
+    .bio-area{
+        padding: 0 20px;
+    }
+
+    #quotes h1{
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    #header{
+        padding-left: 0;
+    }
+
+    .sidebar{
+        position: relative;
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .sidebar .title-sidebar{
+        display: none;
+    }
+
+    #main{
+        padding-left: 0;
+    }
+    
+    #header h1{
+        font-size: 20px;
+    }
+
+    .hero-area{
+        flex-direction: column;
+        gap: 0;
+        margin-top: 10px;
+        align-items: center;
+        padding: 20px 0;
+
+    }
+
+    .facts-area{
+        flex-direction: column;
+    }
+
+    .quick-facts span{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .bio-area{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .bio-area p{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .awards-area{
+        grid-template-columns: 214px;
+    }
+
+    .quotes-area{
+        padding: 0 5px;
+    }
+    
+    #quotes h1{
+        font-size: 14px;
+        font-weight: bolder;
+    }
+
+    .footer-area h3{
+        font-size: 14px;
+    }
+}
+/* Akhir Style Responsive Halaman Idola */

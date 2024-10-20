@@ -1,0 +1,285 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END OF CSS RESET */
+
+/* Style Umum */
+body{
+    font-family: monospace;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #080205;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+}
+
+header{
+    grid-area: header;
+}
+
+aside{
+    grid-area: sidebar;
+}
+
+section{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+/* Akhir Style Umum */
+
+/* Style Header */
+.header-area{
+    background: #2E073F;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-area h1{
+    color: #EBD3F8;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+}
+/* Akhir Style Header */
+
+/* Style Sidebar */
+.sidebar{
+    width: 150px;
+    height: 100%;
+    background-color: #CCCCCC;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sidebar .title-sidebar h1{
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-menu ul li a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #080205;
+    line-height: 40px;
+    border-top: 1px solid #FFFFFF;
+    transition: 0.3s ease-in;
+}
+
+.sidebar .sidebar-menu a:hover{
+    background-color: #FFFFFF;
+}
+/* Akhir Style Sidebar */
+
+/* Style Title Area */
+#title-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    background-color: #F8F8F8;
+    margin-bottom: 50px;
+}
+
+#title-area .img-area img{
+    height: 350px;
+    border-radius: 8%;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-area h1{
+    font-size: 26px;
+    font-weight: 700;
+    color: #2E073F;
+    margin-bottom: 10px;
+}
+
+.text-area p{
+    padding: 0 80px;
+    text-align: justify;
+}
+/* Akhir Style Title Area */
+
+/* Registration Style */
+#form-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.form-title h1{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2E073F;
+    text-align: center;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-input label{
+    display: block;
+}
+
+.form-input .input input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #2E073F;
+    color: #2E073F;
+}
+
+.submit button{
+    display: block;
+    width: 100%;
+    background-color: #2E073F;
+    color: #EBD3F8;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+/* Akhir Style Registration */
+
+/* Footer Style */
+.footer-area{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    background-color: #2E073F;
+}
+
+.footer-area h3{
+    color: #EBD3F8;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+/* Akhir Footer Style */
+
+/* Style Responsive Halaman Idola */
+@media (min-width: 577px) and (max-width: 768px){
+    #form-area{
+        padding: 30px;
+    }
+
+    .text-area p{
+        padding: 0 30px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid{
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar sidebar"
+        "main main"
+        "footer footer";
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    #header h1{
+        font-size: 20px;
+    }
+
+    .text-area p{
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    #form-area{
+        padding: 0 10px;
+    }
+
+    .footer-area h3{
+        font-size: 14px;
+    }
+}
+/* Akhir Style Responsive Halaman Idola */
